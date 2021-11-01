@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #212121;
+}
+
+h6 {
+    color: #aaaaaa;
+    margin-left: 20px;
+}
+
+hr {
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    /* color of the tracking area */
+    background: #212121;
+}
+
+::-webkit-scrollbar-corner {
+    background: #212121;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #7a7a7a;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    /* creates padding around scroll thumb */
+}

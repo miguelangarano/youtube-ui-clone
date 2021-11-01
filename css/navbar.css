@@ -1,0 +1,80 @@
+.navbar {
+    height: 60px;
+}
+
+.navbar img {
+    width: 25px;
+    height: 25px;
+}
+
+.navbar .logo {
+    height: 20px;
+    width: 100px;
+}
+
+.navbar .account-image {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.navbar i {
+    color: rgb(235, 235, 235);
+    font-size: 20px;
+}
+
+.navbar-col {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-col>.sidebar-button {
+    margin-left: 40px;
+}
+
+.navbar .options-container {
+    justify-content: end;
+}
+
+.navbar-col>input {
+    background-color: #121212;
+    border: 1px solid #323232;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    width: 50%;
+    color: white;
+}
+
+.navbar-col>input:focus {
+    outline: 1px solid #1963b9;
+}
+
+.search-nav {
+    gap: 0;
+}
+
+.navbar-col>.search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #323232;
+    height: 40px;
+    width: 60px;
+    margin: 0;
+    margin-left: 1px;
+    padding: 0;
+}
+
+.navbar-col>.mic-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: #181818;
+    margin-left: 10px;
+}

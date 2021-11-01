@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/sidebar.css" rel="stylesheet">
+    <link href="css/content.css" rel="stylesheet">
+    <link href="css/main-content.css" rel="stylesheet">
+    <link href="css/video-card.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Youtube UI Clone</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row navbar justify-content-center align-items-center">
+            <div class="col-1 navbar-col">
+                <div class="sidebar-button" id="sidebar-button">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <img class="logo" src="assets/youtube-logo.png" alt="">
+            </div>
+            <div class="col navbar-col search-nav">
+                <input type="text" class="search-input">
+                <div class="search-button">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="mic-button">
+                    <i class="fas fa-microphone"></i>
+                </div>
+            </div>
+            <div class="col-2 navbar-col options-container">
+                <img src="assets/video-icon.svg" alt="">
+                <img src="assets/apps-icon.svg" alt="">
+                <i class="far fa-bell"></i>
+                <img class="account-image" src="assets/user-image.jpg" alt="">
+            </div>
+        </div>
+        <div class="row main-content">
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-item">
+                    <img src="assets/home-icon.svg" alt="">
+                    <span>Inicio</span>
+                </div>
+                <div class="sidebar-item">
+                    <img src="assets/explore-icon.svg" alt="">
+                    <span>Explorar</span>
+                </div>
+                <div class="sidebar-item">
+                    <img src="assets/subscriptions-icon.svg" alt="">
+                    <span>Subscripciones</span>
+                </div>
+                <div class="sidebar-item">
+                    <img src="assets/library-icon.svg" alt="">
+                    <span>Biblioteca</span>
+                </div>
+                <div id="full-sidebar-content">
+                    <hr>
+                    <div id="collapsable-container">
+                        <div class="sidebar-item">
+                            <img src="assets/history-icon.svg" alt="">
+                            <span>Historial</span>
+                        </div>
+                        <div class="sidebar-item">
+                            <img src="assets/myvideos-icon.svg" alt="">
+                            <span>Mis vídeos</span>
+                        </div>
+                        <div class="sidebar-item">
+                            <img src="assets/later-icon.svg" alt="">
+                            <span>Ver más tarde</span>
+                        </div>
+                        <div class="sidebar-item">
+                            <img src="assets/customlist-icon.svg" alt="">
+                            <span>Mi lista</span>
+                        </div>
+                        <div class="sidebar-item">
+                            <img src="assets/like-icon.svg" alt="">
+                            <span>Vídeos que me gustan</span>
+                        </div>
+                        <div class="sidebar-item">
+                            <img src="assets/customlist-icon.svg" alt="">
+                            <span>Otra lista</span>
+                        </div>
+                        <div class="sidebar-item">
+                            <img src="assets/customlist-icon.svg" alt="">
+                            <span>Mi lista musical</span>
+                        </div>
+                        <div class="sidebar-item">
+                            <img src="assets/customlist-icon.svg" alt="">
+                            <span>Aprendizaje</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-item" id="more-item" onclick="openCloseVideosList()">
+                        <img src="assets/verticalarrow-icon.svg" alt="">
+                        <span>Mostrar más</span>
+                    </div>
+                    <hr>
+                    <h6>SUSCRIPCIONES</h6>
+                    <div id="collapsable-container-subscriptions">
+                        <div class="sidebar-item subscription-sidebar-item">
+                            <img src="https://yt3.ggpht.com/ytc/AKedOLSx4DEhRotv4K7_RNXXQ23EZa2ZTzYOTipwMt2M4w=s88-c-k-c0x00ffffff-no-rj"
+                                alt="">
+                            <span>ECDF - El Canal del Fútbol</span>
+                        </div>
+                        <div class="sidebar-item subscription-sidebar-item">
+                            <img src="https://yt3.ggpht.com/ytc/AKedOLTJUiShlC8W7HXZsAFXTDCNEKvFSMH139voK9dn=s88-c-k-c0x00ffffff-no-rj"
+                                alt="">
+                            <span>DW Español</span>
+                        </div>
+                        <div class="sidebar-item subscription-sidebar-item">
+                            <img src="https://yt3.ggpht.com/cigm1iBXYZYpRTas_V7IXRf3YyII26Z1fBWGqQu8RvopxhlRlJQW6ZyKqacFv8kqGO7bcfyXXQ=s88-c-k-c0x00ffffff-no-rj"
+                                alt="">
+                            <span>Teleamazonas Ecuador</span>
+                        </div>
+                        <div class="sidebar-item subscription-sidebar-item">
+                            <img src="https://yt3.ggpht.com/ytc/AKedOLS9B_yEtJ-mrdT9bEFBlB6M6AlEJZg2YCCER4TSMQ=s88-c-k-c0x00ffffff-no-rj"
+                                alt="">
+                            <span>Academia Play</span>
+                        </div>
+                        <div class="sidebar-item subscription-sidebar-item">
+                            <img src="https://yt3.ggpht.com/ytc/AKedOLR_dpp07dYL4eMpUn5Tes8YtErcF1dEIpDXB0Jl=s88-c-k-c0x00ffffff-no-rj"
+                                alt="">
+                            <span>MIGALA</span>
+                        </div>
+                        <div class="sidebar-item subscription-sidebar-item">
+                            <img src="https://yt3.ggpht.com/ytc/AKedOLRULGIKiVOACrSDom1AaFpiPSTud-08OrcUEmKLPw=s88-c-k-c0x00ffffff-no-rj"
+                                alt="">
+                            <span>IvanBaOficial</span>
+                        </div>
+                        <div class="sidebar-item subscription-sidebar-item">
+                            <img src="https://yt3.ggpht.com/ytc/AKedOLR3x4ie6LK20vuJQ6GFpXqr-sERAtLYcfcTdkxg8g=s88-c-k-c0x00ffffff-no-rj"
+                                alt="">
+                            <span>Space (Official)</span>
+                        </div>
+                        <div class="sidebar-item subscription-sidebar-item">
+                            <img src="https://yt3.ggpht.com/ytc/AKedOLSx4DEhRotv4K7_RNXXQ23EZa2ZTzYOTipwMt2M4w=s88-c-k-c0x00ffffff-no-rj"
+                                alt="">
+                            <span>ECDF - El Canal del Fútbol</span>
+                        </div>
+                        <div class="sidebar-item subscription-sidebar-item">
+                            <img src="https://yt3.ggpht.com/ytc/AKedOLTJUiShlC8W7HXZsAFXTDCNEKvFSMH139voK9dn=s88-c-k-c0x00ffffff-no-rj"
+                                alt="">
+                            <span>DW Español</span>
+                        </div>
+                        <div class="sidebar-item subscription-sidebar-item">
+                            <img src="https://yt3.ggpht.com/cigm1iBXYZYpRTas_V7IXRf3YyII26Z1fBWGqQu8RvopxhlRlJQW6ZyKqacFv8kqGO7bcfyXXQ=s88-c-k-c0x00ffffff-no-rj"
+                                alt="">
+                            <span>Teleamazonas Ecuador</span>
+                        </div>
+                        <div class="sidebar-item subscription-sidebar-item">
+                            <img src="https://yt3.ggpht.com/ytc/AKedOLS9B_yEtJ-mrdT9bEFBlB6M6AlEJZg2YCCER4TSMQ=s88-c-k-c0x00ffffff-no-rj"
+                                alt="">
+                            <span>Academia Play</span>
+                        </div>
+                        <div class="sidebar-item subscription-sidebar-item">
+                            <img src="https://yt3.ggpht.com/ytc/AKedOLR_dpp07dYL4eMpUn5Tes8YtErcF1dEIpDXB0Jl=s88-c-k-c0x00ffffff-no-rj"
+                                alt="">
+                            <span>MIGALA</span>
+                        </div>
+                        <div class="sidebar-item subscription-sidebar-item">
+                            <img src="https://yt3.ggpht.com/ytc/AKedOLRULGIKiVOACrSDom1AaFpiPSTud-08OrcUEmKLPw=s88-c-k-c0x00ffffff-no-rj"
+                                alt="">
+                            <span>IvanBaOficial</span>
+                        </div>
+                        <div class="sidebar-item subscription-sidebar-item">
+                            <img src="https://yt3.ggpht.com/ytc/AKedOLR3x4ie6LK20vuJQ6GFpXqr-sERAtLYcfcTdkxg8g=s88-c-k-c0x00ffffff-no-rj"
+                                alt="">
+                            <span>Space (Official)</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-item" id="more-item-subscriptions" onclick="openCloseSubscriptionsList()">
+                        <img src="assets/verticalarrow-icon.svg" alt="">
+                        <span>Mostrar</span>
+                    </div>
+                    <hr>
+                    <h6>MÁS DE YOUTUBE</h6>
+                    <div class="sidebar-item">
+                        <img src="assets/premium-icon.svg" alt="">
+                        <span>Youtube Premium</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <img src="assets/games-icon.svg" alt="">
+                        <span>Videojuegos</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <img src="assets/direct-icon.svg" alt="">
+                        <span>Directo</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <img src="assets/learning-icon.svg" alt="">
+                        <span>Aprendizaje</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <img src="assets/sports-icon.svg" alt="">
+                        <span>Deportes</span>
+                    </div>
+                    <hr>
+                    <div class="sidebar-item">
+                        <img src="assets/config-icon.svg" alt="">
+                        <span>Configuración</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <img src="assets/flag-icon.svg" alt="">
+                        <span>Historial de denuncias</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <img src="assets/help-icon.svg" alt="">
+                        <span>Ayuda</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <img src="assets/suggestions-icon.svg" alt="">
+                        <span>Enviar sugerencias</span>
+                    </div>
+                    <hr>
+                    <div class="words-container">
+                        <div><span>Información</span></div>
+                        <div><span>Prensa</span></div>
+                        <div><span>Derechos de autor</span></div>
+                        <div><span>Creadores</span></div>
+                        <div><span>Publicidad</span></div>
+                        <div><span>Desarrolladores</span></div>
+                    </div>
+                    <div class="words-container">
+                        <div><span>Términos</span></div>
+                        <div><span>Privacidad</span></div>
+                        <div><span>Política y seguridad</span></div>
+                        <div><span>Cómo funciona YouTube</span></div>
+                        <div><span>Probar funciones nuevas</span></div>
+                    </div>
+                    <div class="copyright"><span>&copy 2021 Google LLC</span></div>
+                </div>
+            </div>
+            <div class="content" id="content">
+                <div class="row topics-main-container">
+                    <hr>
+                    <div class="topics-container" id="topics-container">
+                        <div class="button-wrapper wrapper-left">
+                            <div class="button-scroll">
+                                <img src="assets/button-left-icon.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="topic-container">
+                            <span>Todo</span>
+                        </div>
+                        <div class="topic-container">
+                            <span>Mixes</span>
+                        </div>
+                        <div class="topic-container">
+                            <span>Música</span>
+                        </div>
+                        <div class="topic-container">
+                            <span>En directo</span>
+                        </div>
+                        <div class="topic-container">
+                            <span>Historia</span>
+                        </div>
+                        <div class="topic-container">
+                            <span>Programación</span>
+                        </div>
+                        <div class="topic-container">
+                            <span>Universos</span>
+                        </div>
+                        <div class="topic-container">
+                            <span>Computadoras</span>
+                        </div>
+                        <div class="topic-container">
+                            <span>Humanos de ventormenta</span>
+                        </div>
+                        <div class="topic-container">
+                            <span>Podcast</span>
+                        </div>
+                        <div class="topic-container">
+                            <span>Conversaciones</span>
+                        </div>
+                        <div class="topic-container">
+                            <span>Andy Rivera</span>
+                        </div>
+                        <div class="topic-container">
+                            <span>Jaime Altozano</span>
+                        </div>
+                        <div class="topic-container">
+                            <span>Seminarios</span>
+                        </div>
+                        <div class="topic-container">
+                            <span>Debates</span>
+                        </div>
+                        <div class="topic-container">
+                            <span>Manga</span>
+                        </div>
+                        <div class="topic-container">
+                            <span>Enchufe.tv</span>
+                        </div>
+                        <div class="button-wrapper wrapper-right">
+                            <div class="button-scroll">
+                                <img src="assets/button-right-icon.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="row videos-main-container" id="videos-list-container">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/videos-data.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
